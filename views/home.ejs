@@ -1,11 +1,101 @@
+<!DOCTYPE html>
 <html>
-    <head>
-      <title>
-          <%=title %>
-      </title>
-    </head>
-    <body>
-      <h1> Codeial /  <%=title %> </h1>
+<head>
+	<title>TODO APP </title>
+    <script src="https://kit.fontawesome.com/b962e18856.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <!-- Input ToDo Form -->
+    <div id="todo-app">
+    <div id="heading">
+    	<h1>TODO APP</h1>
+    </div>
+<div class="whole-form-part">
+	 
+    <form action="/todo_add" method="POST" id="todo-form">
+        <!-- Description -->
+        <div class="description">
+            <div style="height: 30%;padding:0.8rem 0.5rem 0rem 1rem;font-size: .9rem;">
+            <label for="todo-description">Description</label>
+        </div>
+            <input autocomplete="off" type="text" name="description" id="todo-description" placeholder="Add Description" required>
+            
+        </div>
+        <div class="date-category">
+        <!-- Category - General, Work, Personal -->
+        <div class="category">
+        	<div style="padding-left: 1rem;">
+                 <label for="todo-category">Category</label>
+            </div>
+            <select name="category" id="todo-category" required>
+                <option value="" disabled selected>Choose a Category</option>
+                <option value="General">General</option>
+                <option value="Personal">Personal</option>
+                <option value="Work">Work</option>
+            </select>
+            
+        </div>
+        <!-- Due Date -->
+        <div class="date">
+            <div>
+            <label for="todo-date">Due Date</label>
+            </div>
+            <div>
+            <input type="date" name="date" id="todo-date">
+            </div>
+        </div>
+    </div>
+        <!-- Submit Button -->
+        <div id="submit-div" >
+        <button class="submit-todo" type="submit">
+            <a class="submit-todo-btn" style="text-decoration: none;" href="">
+            <div class=submit-innerdiv >
+            	<div>
+            	<i class="fas fa-plus" style="color: white;margin-left: .3rem;"></i>
+              </div>
+              <div style="text-decoration: none;color: white;margin-left: .8rem;">
+              	ADD TASK
+              </div>
+            </div>
+            </a>
+        </button>
+    </div>
+    </form>
+</div>
+  <!-- list part   -->
+  <div id="list">
+     <ul>
+       <% for(let i of todo_list){ %>
+           <li class="individual-list">
+              <div class="details">
+                 <div class="todo-icon">
 
-    </body>
-    </html>
+                 </div>
+                 <div class="description-and-date">
+                   <div class="desc-div">
+                       <%= i.description %>
+
+                   </div>
+                   <div class="date-div">
+                    <%= i.date %>
+                   </div>
+                 </div>
+                 <div class="category-div">
+                    <%= i.category %>
+                 </div>
+              </div>
+              <div class=delete-todo style="background-color: aquamarine;">
+                 <a href="/delete-todo/?id=<%=i._id %>">
+                    Delete
+                 </a>
+              </div>
+           </li>
+           <% } %>
+       
+     </ul>
+  </div>
+</div>
+</body>
+</html>

@@ -27,7 +27,7 @@
         <!-- Category - General, Work, Personal -->
         <div class="category">
         	<div style="padding-left: 1rem;">
-                 <label for="todo-category">Category</label>
+                 <label for="todo-category" style="font-size: .9rem;font-family: sans-serif;">Category</label>
             </div>
             <select name="category" id="todo-category" required>
                 <option value="" disabled selected>Choose a Category</option>
@@ -36,10 +36,10 @@
                 <option value="Work">Work</option>
             </select>
             
-        </div>
+        </div >
         <!-- Due Date -->
         <div class="date">
-            <div>
+            <div style="padding-left: .7rem;font-size: .9rem;font-family: sans-serif;">
             <label for="todo-date">Due Date</label>
             </div>
             <div>
@@ -80,15 +80,16 @@
                    </div>
                    <div class="date-div">
                        <div>
-                        <i class="fas fa-calendar-alt" style="font-size: 1rem; color: grey;"></i>
+                        <i class="fas fa-calendar-alt" style="font-size: 1rem;"></i>
                        </div>
-                    <div style="margin-left: .5rem;font-size: .8rem;margin-top: .3rem;"><%= i.date %></div>
+                    <div class="main-date" style="margin-left: .5rem;font-size: .8rem;margin-top: .3rem;"><%= i.date %></div>
                    </div>
                  </div>
                  <div class="category-div">
                     <div class="category-type"><%= i.category %></div>
                  </div>
               </div>
+              <!-- Delete button -->
               <div class="delete-todo">
                  <a href="/delete-todo/?id=<%=i._id %>" class="anchor">
                    
@@ -104,5 +105,6 @@
      </ul>
   </div>
 </div>
+  <script  src="/javascript/script.js"></script>
 </body>
 </html>

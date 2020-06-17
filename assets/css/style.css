@@ -12,7 +12,7 @@ body{
     display: flex;
     flex-direction: column;
     background-color: white;
-   /* justify-content: center;*/
+  
    
 
 }
@@ -23,9 +23,9 @@ body{
 #todo-form{
 	width: 100%;
     flex-direction: column;
-    /*background-color: white;*/
+    
     justify-content: center;
-    /*background-color: cyan;	*/
+    
 }
 #heading{
     height: 12vh;
@@ -35,13 +35,13 @@ body{
    font-family: sans-serif;
    color:grey;
 
-     /* background-color: cadetblue; */
+     
 }
 .description{
 	height:10vh;
-	width: 100%;
-	/*background-color: yellow;*/
-	border-top:  solid 1px lightgray;
+    width: 100%;
+    
+ 	border-top:  solid 1px lightgray;
 	border-bottom: solid 1px lightgrey;
 
 
@@ -49,7 +49,7 @@ body{
 
 #todo-description{
 margin-left: 0.8rem;
-/* padding-left : 0.5rem ; */
+
 padding-bottom: 0.5rem;
 border: none;
 outline: none;
@@ -61,12 +61,11 @@ width: 100%;
 display: flex;
 flex-flow: row;
 
-/*justify-content: space-between;*/
-/*border-top:  solid 1px grey;*/
-	border-bottom: solid 1px lightgray;
+
+border-bottom: solid 1px lightgray;
 }
 .category{
-	/*background-color: cyan;*/
+	
 	
 	width: 50%;
 	height: 100%;
@@ -84,15 +83,22 @@ justify-content: center;
 }
 
 
-select option{
+#todo-category option{
 	background-color: #ddd;
     font-size: 0.9rem;
     padding: .5rem;
+    border:none;
+    outline:none;
     
+}
+#todo-category option:hover{
+    border:none;
+    outline:none;
+    background-color: yellowgreen;
 }
 
 .date{
-/*background-color: yellow;*/
+
 	
 	width: 50%;
 	height: 100%;
@@ -115,7 +121,7 @@ justify-content: center;
 	align-items: center;
 	height:11vh;
 	width:100%;
-	/* border-bottom:solid 1px grey;  */
+	
 	color: white;
 }
 
@@ -148,7 +154,7 @@ ul{
     display: flex;
     flex-direction: row;
     border-top: solid 1px lightgrey;
-    /* background-color: cornflowerblue; */
+    
 }
 .individual-list:hover{
     background-color: rgb(248, 248, 248);
@@ -167,24 +173,24 @@ ul{
 }
 .description-and-date{
     width:70%;height:100%;
-    /* background-color: crimson; */
+    
     display: flex;
     flex-direction: column;
 }
 .desc-div{
     width: 100%;
     color: grey;   
-    /* background-color: darkgoldenrod; */
+   
     font-size: 1.1rem;
     font-family: serif;
      padding-top:1rem;
      font-weight: 500;
-     /* align-items: center;    */
+     
 }
 .date-div{
     width: 100%;
     padding-top: .3rem;
-    /* background-color: darkgreen; */
+    
     display: flex;
     flex-direction: row;
     color: grey;
@@ -193,7 +199,7 @@ ul{
 width:20%;
 height: 100%;
 
-/* background-color: darkmagenta; */
+
 }
 .category-type{
   height: 45%;
@@ -203,7 +209,7 @@ height: 100%;
   align-items: center;
   justify-content: center;
   background-color: yellowgreen;
-  /* background-color: teal; */
+  
 margin-top: 1.2rem;
 margin-left:.3rem;
 color:white;
@@ -213,7 +219,7 @@ font-family: serif;
 .delete-todo{
  width:20%;
  height: 100%;
- /* background-color: #444444;    */
+ 
 }
 .anchor{
     height:50%;

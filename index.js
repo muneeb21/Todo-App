@@ -15,6 +15,8 @@ app.use(express.urlencoded());
 
 app.use(express.static('assets'));
 
+// Add data from todo
+
 app.post('/todo_add',function(req,res){
        
     Todo.create({
@@ -30,6 +32,8 @@ app.post('/todo_add',function(req,res){
         return res.redirect('back');
     });
 });
+
+// Fetch todoList data
  app.get('/',function(req,res){
      
     Todo.find({},function(err,todos){
